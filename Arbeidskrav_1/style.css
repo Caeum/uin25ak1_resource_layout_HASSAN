@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --dark-blue: #2A324B;
+    --medium-blue: #58699D;
+    --light-gray: #E1E5EE;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Montserrat', serif;
+    display: flex;
+    flex-direction: column; /* Sørger for at elementene er i en vertikal kolonne */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--light-gray);
+    margin: 0;
+}
+
+main {
+    background-color: var(--white);
+    width: 63%;
+    padding-bottom: 35px;
+    justify-content: space-between;
+}
+
+#categories {
+    display: flex;
+    justify-content: space-between;
+    width: 63%; /* Sørger for at den har samme bredde som `main` */
+    
+}
+
+#categories button {
+    flex: 1;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    max-width: 225px;
+}
+
+#categories button:hover {
+    background-color: var(--medium-blue);
+}
+
+/* Aktiv knapp */
+#categories button.active {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border-bottom: none;
+}
+
+#content {
+    padding: 40px;
+}
+
+li {
+    color: var(--dark-blue);
+}
