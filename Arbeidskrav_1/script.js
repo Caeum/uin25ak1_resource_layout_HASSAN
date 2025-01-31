@@ -7,15 +7,15 @@ const Sections = document.getElementById("content");
 //Funksjon for å oppdatere innholdet på siden, basert på valgt kategori.
 //Bruker .filter() ressursene for å finne den som matcher valgt kategori.
 function contentUpdate(category) {
-    const selectedResource = resources.filter(res => res.category === category)[0];
+    const selectResource = resources.filter(res => res.category === category)[0];
     
-    if (selectedResource) {
+    if (selectResource) {
 //Hvis ressursen er funnet, oppdaterer vi innholdet på siden.
         Sections.innerHTML = 
-        `<h2>${selectedResource.category}</h2>
-        <p>${selectedResource.text}</p>
+        `<h2>${selectResource.category}</h2>
+        <p>${selectResource.text}</p>
             <ul> 
-                ${selectedResource.sources.map(source => `<li><a href="${source.url}" target="_blank">${source.title}</a></li>`).join('')}
+                ${selectResource.sources.map(source => `<li><a href="${source.url}" target="_blank">${source.title}</a></li>`).join('')}
             </ul>
         `;
     }
